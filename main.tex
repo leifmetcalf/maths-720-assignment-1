@@ -46,7 +46,16 @@ so \(G\) is Abelian.
 \item We have \(q^n-1\) choices for a nonzero first column of \(\GL(n,F)\). For the second column we have \(q^n-q\) choices for a column not in the span of the first column. For the third column we have \(q^n-q^2\) choices for a column not in the span of the first two columns, and so on. Hence
 \[\abs{\GL(n,F)}=\prod_{0\leq i<n}(q^n-q^i).\]
 
-\item
+\item Let \(A\in Z(GL(n,F))\). Let \(E(i,j)\) denote the matrix with a one in position \((i,j)\) and zeroes everywhere else. Let \(1\leq i\leq n\) and \(1\leq j\leq n\). Then \(1+E(i,j)\in GL(n,F)\) and hence 
+\begin{align*}
+&A(1+E(i,j))=(1+E(i,j))A\\
+\implies{}&AE(i,j)=E(i,j)A
+\end{align*}
+The left side is a matrix that is zero everywhere except the \(j\)th column which contains the \(i\)th column from \(A\), and the right side is a matrix that is zero everywhere except the \(i\)th row which contains the \(j\)th row from \(A\).
+
+This implies the off-diagonal elements are zero, since to show \(A_{k,l}\) is zero with \(k\neq l\) we can pick \(i=l\) and \(j=k\). Then the nonzero elements of \(AE(i,j)\) and \(E(i,j)A\) coincide only at \((l,k)\neq(k,l)\).
+
+It also implies the diagonal elements are equal to each other, since to show \(A_{k,k}=A_{l,l}\) we can pick \(i=k\) and \(j=l\). Then the nonzero elements of \(AE(i,j)\) and \(E(i,j)A\) coincide only at \((k,l)\) where \((AE(i,j))_{k,l}=A_{k,k}\) and \((E(i,j)A)_{k,l}=A_{l,l}\). Hence \(A\) is a scalar matrix.
 
 \item Let \(A\coloneqq A_5\) and \(S\coloneqq S_5\) act by conjugation on \(\Omega\coloneqq A_5\). Let \(\alpha\in\Omega\). Suppose \(S_\alpha\) contains an odd permutation \(g\). Then \(\alpha^A=\alpha^S\) since if \(\alpha^h\in\alpha^S\) for some \(h\in S\) then either \(h\) is even and \(\alpha^h\in\alpha^A\) or \(h\) is odd and \(gh\) is even and \(\alpha^h=\alpha^{gh}\in\alpha^A\).
 
@@ -65,17 +74,33 @@ There are five even conjugacy classes in \(S_5\):
 
 The identity. Clearly this is a conjugacy class in \(A_5\) with one element.
 
-Two disjoint 2-cycles. \((1,2)\) commutes with \((1,2)(3,4)\) so these are the same as in \(S_5\). There are \(\binom52\binom32/2=15\) elements in this class.
+Two disjoint 2-cycles. \((1,2)\) commutes with \((1,2)(3,4)\) so these are the same as in \(S_5\). There are \(\binom52\binom32/2!=15\) elements in this class.
 
-3-cycles. \((4,5)\) commutes with \((1,2,3)\) so these are the same as in \(S_5\). There are \(\binom53*2=20\) elements in this class.
+3-cycles. \((4,5)\) commutes with \((1,2,3)\) so these are the same as in \(S_5\). There are \(\binom53\cdot2!=20\) elements in this class.
 
-5-cycles. 
+5-cycles. The only conjugations in \(S_5\) that preserve 5-cycles are 5-cycles, so this class splits into two. There are 24 5-cycles in \(S_5\) so there are two conjugacy classes of order 12 in \(A_5\) with representatives \((1,2,3,4,5)\) and \((1,2,3,5,4)\) respectively.
 
 \item \begin{enumerate}
 
 \item 
 
+\item
+
 \end{enumerate}
+
+\item
+
+\item \begin{enumerate}
+
+\item
+
+\item
+
+\end{enumerate}
+
+\item
+
+\item
 
 \end{enumerate}
 
