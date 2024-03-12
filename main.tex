@@ -1,0 +1,82 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{xfrac}
+\usepackage{xcolor}
+
+\newcommand{\tr}{^{\mathsf{T}}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\half}{\sfrac{1\!}2}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\interior}{int}
+\DeclareMathOperator{\closure}{cl}
+\DeclareMathOperator{\sgn}{sgn}
+
+\DeclareFontFamily{U}{mathb}{\hyphenchar\font45}
+\DeclareFontShape{U}{mathb}{m}{n}{
+      <5> <6> <7> <8> <9> <10> gen * mathb
+      <10.95> mathb10 <12> <14.4> <17.28> <20.74> <24.88> mathb12
+      }{}
+\DeclareSymbolFont{mathb}{U}{mathb}{m}{n}
+\DeclareFontSubstitution{U}{mathb}{m}{n}
+\let\dddot\relax
+\DeclareMathAccent{\dddot}{0}{mathb}{"3B}
+
+\setlist[enumerate, 1]{leftmargin=0pt, label=\textbf{\arabic*.}}
+
+\begin{document}
+
+\begin{enumerate}
+
+\item Let \(x,y\in G\). Then
+\begin{align*}
+&xyxy=1\\
+\implies{}&xyxyyx=yx\\
+\implies{}&xy=yx
+\end{align*}
+so \(G\) is Abelian.
+
+\item We have \(q^n-1\) choices for a nonzero first column of \(\GL(n,F)\). For the second column we have \(q^n-q\) choices for a column not in the span of the first column. For the third column we have \(q^n-q^2\) choices for a column not in the span of the first two columns, and so on. Hence
+\[\abs{\GL(n,F)}=\prod_{0\leq i<n}(q^n-q^i).\]
+
+\item
+
+\item Let \(A\coloneqq A_5\) and \(S\coloneqq S_5\) act by conjugation on \(\Omega\coloneqq A_5\). Let \(\alpha\in\Omega\). Suppose \(S_\alpha\) contains an odd permutation \(g\). Then \(\alpha^A=\alpha^S\) since if \(\alpha^h\in\alpha^S\) for some \(h\in S\) then either \(h\) is even and \(\alpha^h\in\alpha^A\) or \(h\) is odd and \(gh\) is even and \(\alpha^h=\alpha^{gh}\in\alpha^A\).
+
+Conversely suppose \(S_\alpha\) does not contain an odd permutation. Then \(A_\alpha=S_\alpha\) and hence
+\[\alpha^A\simeq\frac A{A_\alpha}=\frac A{S_\alpha}\]
+and since
+\begin{gather*}
+\alpha^S\simeq\frac S{S_\alpha}\\
+\abs{A}=\abs{S}
+\end{gather*}
+it follows that
+\[\abs{\alpha^A}=\sfrac{1\!}2\abs{\alpha^S}.\]
+Therefore if the centraliser of an element of a conjugacy class contains an odd permutation then that conjugacy class is equal to the corresponding class in \(S_5\); otherwise it is half its size.
+
+There are five even conjugacy classes in \(S_5\):
+
+The identity. Clearly this is a conjugacy class in \(A_5\) with one element.
+
+Two disjoint 2-cycles. \((1,2)\) commutes with \((1,2)(3,4)\) so these are the same as in \(S_5\). There are \(\binom52\binom32/2=15\) elements in this class.
+
+3-cycles. \((4,5)\) commutes with \((1,2,3)\) so these are the same as in \(S_5\). There are \(\binom53*2=20\) elements in this class.
+
+5-cycles. 
+
+\item \begin{enumerate}
+
+\item 
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
